@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+:root{
+    --font-size:16px;
+    --white:#fff;
+    --font-family:  'Raleway', sans-serif;
+    --transition:0.3 ease;
+    --black:#000;
+    --pink:#f53da7;
+
+}
+/*************
+BASIC STYLE
+*************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--black);
+}
+p{
+    color: rgb(78, 78, 78);
+}
+a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1rem;
+}
+h1{
+    font-weight: 800;
+}
+ul{
+    list-style: none;
+}
+h2,h3,h4,h5,h6{
+    font-weight: 700;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+button{
+    background: inherit;
+    width: 150px;
+    padding: 10px 20px;
+    border: 1px var(--black) solid;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+button:hover{
+    background: var(--pink);
+}
+
+/*************
+HEADER STYLE
+*************/
+
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)) ,url(/Images/header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: var(--white);
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+header nav ul{
+    display: flex;
+    font-weight: 500;
+}
+header nav ul li{
+    margin-left: 60px;
+}
+header .logo{
+    font-size: 1.6rem;
+}
+header nav .hamburger{
+    display: none;
+    cursor: pointer;
+}
+header nav .hamburger .bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: #fff;
+}
+header hgroup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+header hgroup h5{
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+header hgroup h1{
+    margin-bottom: 30px;
+    font-size: 3rem;
+}
+header hgroup h6{
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/*************
+ABOUT STYLE
+*************/
+
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+.about article{
+    flex: 0 0 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+.about .image{
+    flex: 0 0 28%;
+}
+.about img,
+.blog .container article img,
+.form .image img{
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 30px #888888;
+}
+.about article h2{
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+.about article h6{
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+.about .line,
+.gallery .line{
+    width: 150px;
+    height: 2px;
+    background: var(--pink);
+    margin-bottom: 20px;
+}
+.about button{
+    margin-top: 30px;
+}
+
+/*************
+STATISTIC STYLE
+*************/
+.statistic{
+    margin-bottom: 30px;
+}
+.numbers{
+    width: 76%;
+    margin: auto;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.numbers div span{
+    font-size: 2rem;
+    font-weight: 800;
+}
+.numbers hr{
+    width: 40px;
+    margin: 20px auto;
+}
+.numbers div p{
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+/*************
+CLIENTS STYLE
+*************/
+.clients{
+    padding: 50px 0;
+}
+.clients .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.clients .clean{
+    flex: 5;
+}
+.clients .full{
+    flex: 7;
+    display: flex;
+}
+.clients .full img{
+    width: 100%;
+}.clients .left .full .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    padding-right: 20px;
+}
+.clients .left .full .text hr{
+    height: 2px;
+    background: var(--pink);
+    border: none;
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    right: -250px;
+}
+.clients .right .full .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-left: 20px;
+}
+.clients .right .full .text hr{
+    height: 2px;
+    background: var(--pink);
+    border: none;
+    width: 70%;
+    position: relative;
+    left: -100px;
+
+}
+/*************
+BLOG STYLE
+*************/
+.blog .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 60px 0 0 0  ;
+}
+.blog article{
+    flex: 0 0 30%;
+}
+.blog .img{
+    flex: 0 0 33%;
+}
+.blog .img img{
+    height: 90%;
+}
+.blog .container article .post{
+    padding-bottom: 80px;
+    line-height: 1.6;
+}
+.blog .text{
+    margin-top: 30px;
+}
+.blog .text h3,
+.bottom-bar h3{
+    color: var(--pink)
+}
+.blog .text p{
+    font-size: 0.9rem;
+}
+
+/*************
+GALLERY STYLE
+*************/
+
+.gallery{
+    padding-top: 40px;
+}
+.gallery .container h1{
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.gallery .container h4{
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+.gallery .group{
+    background: rgb(219, 219, 219);
+    padding: 30px 0 30px 0 ;
+}
+.gallery .line{
+    width: 240px;
+}
+.gallery .container article{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.gallery .container div{
+    flex: 0 0 23%;
+}
+.gallery .post1,.post2,.post3,.post4,.post5,.post6,.post7,.post8{
+    height: 240px;
+    display: flex;
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.gallery h6{
+    color: var(--white);
+    background: var(--pink);
+    display: inline;
+    padding: 15px 15px;
+    opacity: 0.8;
+}
+.gallery .post1{
+    background-image: url(/Images/works1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.gallery .post2{
+    background-image: url(/Images/works2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.gallery .post3{
+    background-image: url(/Images/works3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.gallery .post4{
+    background-image: url(/Images/works4.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.gallery .post5{
+    background-image: url(/Images/works5.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.gallery .post6{
+    background-image: url(/Images/works6.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.gallery .post1{
+    background-image: url(/Images/works1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.gallery .post7{
+    background-image: url(/Images/works7.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.gallery .post8{
+    background-image: url(/Images/works8.jpg);
+    background-position: center;
+    background-size: cover;
+}
+/*************
+FORM STYLE
+*************/
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+}
+.form form{
+    flex: 0 0 60%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+.form form input{
+    margin-bottom: 10px;
+    height: 30px;
+    padding: 0 10px;
+    color: grey;
+    font-weight: 400;
+}
+.form form textarea{
+    padding: 10px 10px;
+    color: grey;
+    font-weight: 500;
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+}
+.form .image{
+    flex: 0 0 37%;
+}
+.form button{
+    margin-top: 50px;
+    width: 200px;
+}
+
+/*************
+BOTTOM-BAR STYLE
+*************/
+
+.bottom-bar{
+    background: rgb(241, 241, 241);
+    text-align: center;
+    padding: 40px;   
+}
+.bottom-bar h6:nth-child(2){
+    padding: 10px;
+}
+
+/*************
+FOOTER STYLE
+*************/
+footer .container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+footer{
+    background: rgb(139, 139, 139);
+    padding: 40px;   
+}
+footer i{
+    color: var(--pink);
+}
+footer p{
+    color: var(--black);
+    font-size: 0.8rem;
+}
+footer .icons{
+    margin:auto;
+}
+footer .icons i{
+    margin-left: 0px;
+}
+
+/*************
+RESPONSIVE
+*************/
+@media(max-width:767px){
+    .container{
+        width: 90%;
+    }
+    header{
+        height:80vh;
+        text-align: center;
+    }
+    header nav {
+        flex-direction: column;
+    }
+    header nav ul li{
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+    header hgroup{
+        height: 60vh;
+    }
+    header hgroup h5{
+        margin-bottom: 30px;
+    }
+    header hgroup h1{
+        font-size: 2.5rem;
+    }
+    .about article{
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+    .about .image{
+        flex: 0 0 100%;
+    }
+    .numbers{
+        width: 100%;
+        padding: 40px 20px;
+    }
+    .clients{
+        padding: 0;
+    }
+    .clients .clean{
+        flex: 0 0 0;
+    }
+    .clients .full{
+        flex: 0 0 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .clients .img{
+        order: 2;
+    }
+    .clients .full img{
+        width: 100%;
+    }
+    .clients .left .full .text{
+        order: 1;
+        text-align: center;
+        margin-bottom: 10px;
+        padding-right: 0px;
+    }
+    .clients .img{
+        flex: 0 0 100%;
+    }
+    .clients .text{
+        flex: 0 0 100%;
+    }
+    .clients .left .full .text hr{
+        width: 50%;
+        margin: 20px auto;
+        position: relative;
+        right: 0px;
+    }
+    .clients .right .full .text{
+        text-align: center;
+        margin-bottom: 10px;
+        padding-left: 0px;
+    }
+    .clients .right .full .text hr{
+        width: 50%;
+        margin: 20px auto;
+        position: relative;
+        left: 0px;
+    
+    } 
+    .blog article{
+        flex: 0 0 100%;
+    }
+    .blog .img{
+        flex: 0 0 100%;
+    }
+  
+    .gallery .container div{
+        flex: 0 0 100%;
+    }
+ 
+    .form form{
+        flex: 0 0 100%;
+    }
+    .form .image{
+        margin-top: 50px;
+        flex: 0 0 100%;
+    }
+
+}
+@media(max-width:768px){
+    header nav{
+        flex-direction: row;
+    }
+    header nav .hamburger{
+        display: block;
+    }
+
+    hgroup{
+        margin-top: 40px;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    ul{
+        position: absolute;
+        left: -100%;
+        top: 80px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s ease;
+    }
+    header li{
+        padding-top: 10px;
+        margin-left: 0px;
+    }
+    .navmenu.active{
+        left: 0;
+    }
+    .navmenu{
+        min-height: 120px;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+@media(max-width:375px){
+    header nav ul li a{
+        font-size: 0.8rem;
+    }
+    hgroup{
+        margin-top: 30px;
+    }
+}
